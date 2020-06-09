@@ -1,10 +1,17 @@
 Nav{
+    white-space:nowrap;
+    padding:0;
+    margin:0;
     ul {
         list-style-type: none;
         li {
             display: inline-block;
-            margin: 2em;
+            margin: 1em;
             font-family: $theme-font;
+            a {
+                color: $nav-link-color;
+                text-decoration: none;
+            }
         }
     }
 }

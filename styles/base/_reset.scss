@@ -1,16 +1,16 @@
 html{
-    @include fixCenter();
-    padding:0;
-    margin:0;
     background-color: $bg-color;
-    div {
+    div { 
+        @include fixCenter(); 
         font-size: $font-size;
-        a {
-            color: #000000;
-            text-decoration: none;
-          &:hover{
-            background-color: $nav-button-bg-color;
-          }
+        main {            
+            max-width: 60rem;
+            //border: 3px solid white;
+            @include fixCenter();  
+            a {
+                display: inline;
+                color: $body-link-color;
+            }
         }
       }
 }

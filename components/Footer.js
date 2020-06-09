@@ -1,6 +1,6 @@
 const Footer = () => (
     <footer>
-        It's always a good idea to have a footer. I don't know why.
+        It's not always a good idea to have a footer. But I'm here.
     </footer>
 );
 
