@@ -1,0 +1,10 @@
+Nav{
+    ul {
+        list-style-type: none;
+        li {
+            display: inline-block;
+            margin: 2em;
+            font-family: $theme-font;
+        }
+    }
+}
