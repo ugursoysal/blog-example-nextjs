@@ -9,6 +9,7 @@ Nav{
             margin: 1em;
             font-family: $theme-font;
             a {
+                background-image: $nav-button-bg-img;
                 color: $nav-link-color;
                 text-decoration: none;
             }

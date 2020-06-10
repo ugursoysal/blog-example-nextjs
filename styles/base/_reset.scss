@@ -5,7 +5,6 @@ html{
         font-size: $font-size;
         main {            
             max-width: 60rem;
-            //border: 3px solid white;
             @include fixCenter();  
             a {
                 display: inline;
