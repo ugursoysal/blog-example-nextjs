@@ -1,4 +1,6 @@
 html {
+    overflow-y: scroll; // solution 1 w/scrollbar
+    //padding-left: calc(100vw - 100%); // solution 2
     background-color: $bg-color;
     font-size: $font-size;
 }

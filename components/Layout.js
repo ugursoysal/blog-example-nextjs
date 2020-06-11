@@ -1,19 +1,22 @@
 import Nav from './Nav';
 import Footer from './Footer';
 import Styles from "../styles/main.scss"
-
-function Layout({ children }) {
+import Head from "next/head";
+function Layout({ children, title }) {
+    var tagArray = ["#ableton", "#live", "#beat", "#trap", "#sampling", "#instrumental", "#beatmaking", "#freesamples", "#musicproducer", "#vinyl", "#oldschool", "#art", "#mpc", "#artist", "#lofi", "#beatsforsale", "#love", "#beauty", "#drums"];
     return (
         <div className={Styles.container}>
+            <Head><title>{title}</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" /></Head>
             <Nav />
             <section>
-                <div>Let’s take a look at how we can structure our Sass projects. As projects grow and expand, the need to modularize our directory and file structure increases dramatically. Thus keeping our files and folders organized is crucial. We also have the added benefit of creating components that can be reused across multiple projects. There is no one “correct” structure — its entirely up to you!</div>
+                <div><h4>Simon Posford</h4><br/>better known by his stage name Hallucinogen is an English electronic musician, specializing in psychedelic trance music. His first studio album, Twisted, released in 1995, is considered one of the most influential albums in the genre.</div>
                 <div>
                     <main>
                         {children}
                     </main>
                 </div>
-                <div>Let’s take a look at how we can structure our Sass projects. As projects grow and expand, the need to modularize our directory and file structure increases dramatically. Thus keeping our files and folders organized is crucial. We also have the added benefit of creating components that can be reused across multiple projects. There is no one “correct” structure — its entirely up to you!</div>
+                <div><ul>{tagArray.map(function(tagArray){return (<li><a href="#">{tagArray}</a></li>);})}</ul></div>
             </section>
             <Footer />
         </div>

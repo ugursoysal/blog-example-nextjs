@@ -1,3 +1,10 @@
-article{
+article {
     margin:30px 50px 10px 50px;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    background-color: $article-bg-color;
+    p {
+        /*overflow: hidden;
+        max-width: 66ch;*/
+    }
 }
