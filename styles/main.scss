@@ -1,7 +1,11 @@
 @import './themes/default';
 @import './util/mixins';
 @import './layout/nav';
+@import './layout/main';
+@import './layout/section';
+@import './layout/article';
 @import './layout/footer';
+@import './layout/container';
 @import './base/reset';
 
-*{border: 3px solid white;}
+*{border: 1px solid white;} // layout debug

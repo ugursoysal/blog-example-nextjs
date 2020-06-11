@@ -1,15 +1,4 @@
-html{
+html {
     background-color: $bg-color;
-    div { 
-        @include fixCenter(); 
-        font-size: $font-size;
-        main {            
-            max-width: 60rem;
-            @include fixCenter();  
-            a {
-                display: inline;
-                color: $body-link-color;
-            }
-        }
-      }
+    font-size: $font-size;
 }

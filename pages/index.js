@@ -55,7 +55,7 @@ const Index = () => {
         });
     return (
         <Layout>
-            <div>Hi! Welcome to my blog page.</div>
+            <article>Hi! Welcome to my blog page.</article>
         </Layout>
     );
 }

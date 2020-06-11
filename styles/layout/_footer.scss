@@ -1,5 +1,4 @@
-Footer {
-    @include fixCenter();
+footer {
     font-size: 1rem;
     position: fixed;
     bottom: 0;
@@ -10,5 +9,5 @@ Footer {
     text-align: center;
 }
 footer::selection{
-    background-color:$footer-selection-color;
+    background-color: $footer-selection-color;
 }

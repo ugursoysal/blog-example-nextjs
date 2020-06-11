@@ -1,6 +1,11 @@
-@mixin fixCenter(){
+@mixin fix($alignment){
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: $alignment;
+    align-items: center;
+}
+@mixin fixWithoutJustify($alignment){
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }

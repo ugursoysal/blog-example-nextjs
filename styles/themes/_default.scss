@@ -1,11 +1,20 @@
-$font-size: 125%;
-$bg-color: #87B6D0;
+//font config
+$font-size: 150%;
+$theme-font: "Rhodium Libre", sans-serif;
+//footer
 $footer-bg-color: #F0F3FF;
 $footer-text-color: black;
-$theme-font: "Rhodium Libre", sans-serif;
-$nav-button-bg-img: 'images/nav-button-bg-img.png';
+$footer-selection-color: black;
+//navigation
+$nav-button-bg-img: url('/images/nav-button-bg-img.png');
 $nav-button-bg-color: #F0F3FF;
 $nav-link-color: black;
+$nav-border-radius: 10%;
+$nav-bg-size: 3.8rem;
+$nav-transition-time: 0.5s;
+$nav-bg-hover-size: 6.9rem;
+//main section
 $body-link-color: black;
-$body-bg-color: #F0F3FF;
-$footer-selection-color: black;
+$body-bg-color: rgba(240, 243, 255, 0.918);
+//background color
+$bg-color: #87B6D0;
