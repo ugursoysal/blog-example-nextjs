@@ -1,5 +1,5 @@
 article {
-    @include fix('center');
+    @include fixWithoutJustify('center');
     text-align: center;
     margin:30px 50px 10px 50px;
     padding: 1rem;

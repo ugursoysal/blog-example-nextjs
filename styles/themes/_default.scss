@@ -6,9 +6,9 @@ $footer-bg-color: #F0F3FF;
 $footer-text-color: black;
 $footer-selection-color: black;
 //navigation
-$nav-button-bg-img: url('/images/nav-button-bg-img.png');
+//$nav-button-bg-img: url('/images/nav-button-bg-img.png');
 $nav-button-bg-color: #F0F3FF;
-$nav-link-color: black;
+$nav-link-color: #ebf7f5;
 $nav-border-radius: 10%;
 $nav-bg-size: 3.8rem;
 $nav-transition-time: 0.5s;
@@ -18,7 +18,10 @@ $body-link-color: black;
 $body-bg-color: #f0f3ffea;
 $main-bg-img: url('/images/main-bg.png');
 //background color
-$bg-color: #87B6D0;
+//$bg-color: #87B6D0;
+//$bg-img: url('/images/bg-img.jpg');
+$bg-tile: url('/images/bg-tile.png');
+$bg-color: #000000;
 //articles
 $article-bg-color: rgba(246, 248, 255, 0.918);
 $article-border-radius: 15%;

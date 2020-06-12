@@ -2,5 +2,8 @@ html {
     overflow-y: scroll; // solution 1 w/scrollbar
     //padding-left: calc(100vw - 100%); // solution 2
     background-color: $bg-color;
+    background-image: $bg-tile;
+    background-repeat: repeat;
+    background-position: top center;
     font-size: $font-size;
 }

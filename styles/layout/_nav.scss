@@ -13,22 +13,42 @@ nav{
             margin: 1.1rem;
             a {
                 padding: 0.5rem;
-                background-image: $nav-button-bg-img;
+                /*background-image: $nav-button-bg-img;
                 background-size: $nav-bg-size;
                 background-repeat: no-repeat;
-                background-position: center;
+                background-position: center;*/
                 border-radius: $nav-border-radius;
                 transition: background-size $nav-transition-time;
                 transition-timing-function: cubic-beizer(.07,1.41,.82,1.41);
-                &:hover{
-                    background-size: $nav-bg-hover-size;
-                }
                 //display: block;
                 //background-image: $nav-button-bg-img;
                 //background-repeat: no-repeat;
                 font-family: $theme-font;
-                color: $nav-link-color;
+                $color: $nav-link-color;
+                color: $color;
                 text-decoration: none;
+                                
+                &:hover {
+                  animation: pulse 1s ease-in infinite;
+                  background: linear-gradient(135deg, rgba($color,0.25) 0.25em, transparent 0.25em) -0.5em 0
+                            , linear-gradient(225deg, rgba($color,0.25) 0.25em, transparent 0.25em) -0.5em 0
+                            , linear-gradient(315deg, rgba($color,0.25) 0.25em, transparent 0.25em) 0 0
+                            , linear-gradient(45deg, rgba($color,0.25) 0.25em, transparent 0.25em) 0 0
+                            , radial-gradient(circle, rgba($color,0.25) 43%, transparent 50%) 0 0 / 1em 1em
+                            , radial-gradient(circle, rgba($color,0.25) 43%, transparent 50%) 0.5em 0.5em / 2em 2em;
+                  background-size: 0.75em 0.75em;
+                  color: adjust-hue($color,180);
+                }
+                @keyframes pulse {  
+                    50% {
+                      background-position: 0.66em 0.66em, -0.33em -0.33em;
+                    }
+                    
+                    100% {
+                      background-size: 2em 2em, 1em 1em;
+                      background-position: -1.5em -1.5em, -1em -1em;
+                    }
+                  }
             }
         }
     }

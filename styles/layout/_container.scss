@@ -1,4 +1,5 @@
 .container{
     @include fixWithoutJustify('center');
     background-size: cover;
+    margin-top: 2rem;
 }
