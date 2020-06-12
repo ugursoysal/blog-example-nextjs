@@ -1,9 +1,32 @@
 article {
+    @include fix('center');
+    text-align: center;
     margin:30px 50px 10px 50px;
     padding: 1rem;
-    padding-bottom: 3rem;
     background-color: $article-bg-color;
+    border-radius: $article-border-radius;
+    border: ridge;
+    transition: scale $nav-transition-time;
+    transition-timing-function: cubic-beizer(.07,1.41,.82,1.41);
+    &:hover{
+        scale: 101%;
+        //cursor: pointer;
+    }
+    img {
+        max-width: 20rem; 
+        max-height: 10rem; 
+        padding-bottom: 0;
+    }
+    h2 {        
+        padding-top: 0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
     p {
+        display:block;
+        line-height: 0.6rem;
+        word-spacing: 0px;
+        font-size: 0.6rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         /*overflow: hidden;
         max-width: 66ch;*/
     }

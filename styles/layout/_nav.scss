@@ -1,6 +1,11 @@
 nav{
     white-space:nowrap;
     @include fixWithoutJustify('center');
+    transition: scale $nav-transition-time;
+    transition-timing-function: cubic-beizer(.07,1.41,.82,1.41);
+    &:hover{
+        scale: 101%;
+    }
     ul {
         padding-left: 0;
         li {

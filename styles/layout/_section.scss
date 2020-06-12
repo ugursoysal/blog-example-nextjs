@@ -4,4 +4,30 @@ section {
     div {
         margin:1rem;
     }
+    
+    @media only screen and (max-width: 1200px){
+        display: flex;
+        @include fix('center');
+   }
+}
+
+.rightSection{
+    position: fixed;
+    top: 20%;
+    left: 80%;
+    li {        
+        text-decoration: none;
+    }
+    @media only screen and (max-width: 1200px) {
+            display: none;
+    }
+}
+
+
+.leftSection {
+    padding-top: 2rem;
+
+    @media only screen and (max-width: 1200px){
+           display: none;
+      }
 }

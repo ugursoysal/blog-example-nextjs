@@ -1,5 +1,5 @@
 footer {
-    font-size: 1rem;
+    font-size: 0.2rem;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -7,7 +7,13 @@ footer {
     background-color: $footer-bg-color;
     color: $footer-text-color;
     text-align: center;
+
 }
 footer::selection{
     background-color: $footer-selection-color;
+}
+@media only screen and (max-width: 1000px) {
+    footer {
+        display: none;
+    }
 }

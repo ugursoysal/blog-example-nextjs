@@ -1,6 +1,11 @@
 main {
-    max-width: 60rem;
+    left:0px;
+    right:0px;
+    padding-top: 0.3rem;
+    padding-bottom: 1rem;
     background-color: $body-bg-color;
+    background-image: $main-bg-img;
+    background-repeat: repeat;
     border-radius: 2%;
     a {
         color: $body-link-color;

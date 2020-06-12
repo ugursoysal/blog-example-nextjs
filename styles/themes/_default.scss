@@ -12,11 +12,13 @@ $nav-link-color: black;
 $nav-border-radius: 10%;
 $nav-bg-size: 3.8rem;
 $nav-transition-time: 0.5s;
-$nav-bg-hover-size: 6.9rem;
+$nav-bg-hover-size: 5rem;
 //main section
 $body-link-color: black;
-$body-bg-color: rgba(240, 243, 255, 0.918);
+$body-bg-color: #f0f3ffea;
+$main-bg-img: url('/images/main-bg.png');
 //background color
 $bg-color: #87B6D0;
 //articles
-$article-bg-color: rgba(251, 252, 255, 0.918);
+$article-bg-color: rgba(246, 248, 255, 0.918);
+$article-border-radius: 15%;
