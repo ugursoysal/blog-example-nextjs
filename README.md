@@ -1,0 +1,1 @@
+Blog example in Next.js using Contentful GraphQL API with Apollo. 
