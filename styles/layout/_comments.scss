@@ -1,0 +1,15 @@
+.commentSection{
+    margin-top: -1rem;
+    .commentBox{
+        .commentAuthor{
+            padding: 0.2em;
+            background-color: rgb(85, 85, 85);
+        }
+        .commentText{
+            font-size: 0.9em;
+        }
+        .commentDate{
+            font-size: 0.6em;
+        }
+    }
+}
