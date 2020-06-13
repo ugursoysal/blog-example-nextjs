@@ -25,7 +25,7 @@ function Layout({ children, title, tagArray, authorOnOff }) {
                 </div>
                 {tagArray ?
                     <div className={Styles.rightSection}>
-                        <Tags tagArray={tagArray}/>
+                        <Tags styles={Styles.tags} tagArray={tagArray}/>
                     </div> : null}
             </section>
             <Footer />

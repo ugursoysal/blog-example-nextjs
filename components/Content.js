@@ -1,8 +1,8 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-function Content({ json }) {
+function Content({ json, style }) {
     return (
-        <div>{documentToReactComponents(json)}</div>
+        <div className={style}>{documentToReactComponents(json)}</div>
     );
 }
 export default Content;

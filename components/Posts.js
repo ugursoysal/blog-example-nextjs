@@ -1,29 +1,9 @@
 import { useQuery } from '@apollo/react-hooks'
 import { NetworkStatus } from 'apollo-client'
-import gql from 'graphql-tag'
 import ErrorMessage from './ErrorMessage'
 import Post from '../components/Post'
-import Link from 'next/link'
-
-export const ALL_POSTS_QUERY = gql`
-query blogPostCollection($first: Int!, $skip: Int!) {
-  blogPostCollection(order: dateTime_DESC, limit: $first, skip: $skip, where: {published:true}) {
-    total
-    items{
-     title
-     slug
-      published
-      image{
-        url
-      }
-    }
-  }
-}
-`
-export const blogPostCollectionQueryVars = {
-  skip: 0,
-  first: 2,
-}
+import LoadMoreButton from '../components/LoadMoreButton'
+import { ALL_POSTS_QUERY, blogPostCollectionQueryVars } from '../lib/gqlQueries'
 
 function Posts() {
   const { loading, error, data, fetchMore, networkStatus } = useQuery(
@@ -68,39 +48,11 @@ function Posts() {
   return (
     <div>
       {blogPostCollection.items.map((post, index) => (
-        <Link key={index} href='/blog/[id]' as={'/blog/' + post.slug}><a><Post post={post} index={index} key={index} /></a></Link>
+        <Post post={post} index={index} key={index+1} />
       ))}
-      {areMorePosts && (
-        <button onClick={() => loadMorePosts()} disabled={loadingMorePosts}>
-          {loadingMorePosts ? 'Loading...' : 'Show More'}
-        </button>
-      )}
+    <LoadMoreButton areMorePosts={areMorePosts} loadingMorePosts={loadingMorePosts} loadMorePosts={loadMorePosts}/>
     </div>
   )
 }
 
 export default Posts;
-
-/*
-{
-  blogPostCollection(where: {slug: "raja ram"}) {
-    items {
-      title
-      image {
-        url
-        title
-      }
-      dateTime
-      location {
-        lat
-        lon
-      }
-      content {
-        json
-      }
-      published
-      tags
-    }
-  }
-}
-*/

@@ -1,15 +1,15 @@
 import Link from 'next/link'
 
-function Tags({ tagArray }) {
+function Tags({ styles, tagArray }) {
   return (
     <ul>
       {
         tagArray.map(function (tag) {
           return (
             <li key={tag}>
-              <Link key={tag} href='/blog/tag/[id]' as={'/blog/tag/' + tag}>
-                <a>
-                  {tag}
+              <Link key={tag} href='/blog/tag/[tag]' as={'/blog/tag/' + tag}>
+                <a className={styles}>
+                  #{tag}
                 </a>
               </Link>
             </li>);

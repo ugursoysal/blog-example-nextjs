@@ -11,9 +11,9 @@ section {
    }
 }
 
-.rightSection{
+.rightSection {
     position: fixed;
-    top: 20%;
+    top: 30%;
     left: 80%;
     li {        
         text-decoration: none;
@@ -21,8 +21,14 @@ section {
     @media only screen and (max-width: 1200px) {
             display: none;
     }
+    .tags {
+        background-color: rgb(44, 44, 44);
+        background-origin: content-box;;
+        text-decoration: none;
+        color:darkgrey;
+        line-height: 2rem;
+    }
 }
-
 
 .leftSection {
     padding-top: 2rem;

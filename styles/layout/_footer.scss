@@ -16,4 +16,7 @@ footer::selection{
     footer {
         display: none;
     }
+    html {        
+        overflow-x: hidden;
+    }
 }

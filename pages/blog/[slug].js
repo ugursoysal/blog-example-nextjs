@@ -2,48 +2,22 @@ import Post from '../../components/Post';
 import Layout from '../../components/Layout';
 import ErrorMessage from '../../components/ErrorMessage';
 import { initializeApollo } from '../../lib/apolloClient'
-import gql from 'graphql-tag'
+import { ALL_PATHS_QUERY, ONE_POST_QUERY } from '../../lib/gqlQueries'
+import Comments from "../../components/Comments"
 
-export const ONE_POST_QUERY = gql`
-query blogPostCollection($slug: String!) {
-  blogPostCollection(where:{slug: $slug}) {
-    items {
-      title
-      slug
-      published
-      image {
-        url
-      }
-      tags
-      content{
-        json
-      }
-      dateTime
-      location {
-        lat
-        lon
-      }
-    }
-  }
-}
-`
-
-export const ALL_PATHS_QUERY = gql`
-{
-    blogPostCollection {
-       items {
-         slug
-       }
-     }
-   }
-`
 
 function Slug({ post }) {
     if (!post)
         return <ErrorMessage statusCode='404' message="Page not found." />
+        
+    var comments = (post.linkedFrom != null) ? 
+    (post.linkedFrom.entryCollection.items) : { length : 0 };
     return (
         <Layout title="Blog" tagArray={post.tags} authorOnOff={true}>
             <Post post={post} />
+            <br />
+            {comments.length != 0 ?
+                <Comments comments={comments} /> : null}
         </Layout>);
 }
 export async function getStaticPaths() {

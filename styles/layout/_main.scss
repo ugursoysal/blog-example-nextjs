@@ -7,7 +7,7 @@ main {
     background-image: $main-bg-img;
     background-repeat: repeat;
     border-radius: 5%;
-    a {
+    .articleLink {
         color: $body-link-color;
     }
 }

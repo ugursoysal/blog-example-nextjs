@@ -1,10 +1,11 @@
-import Layout from '../../../components/Layout';
+import Layout from '../../../components/Layout'
 import { initializeApollo } from '../../../lib/apolloClient'
-import PostsByTag, {
+import {
   POSTS_BY_TAG_QUERY,
   ALL_TAGS_QUERY,
   tagsQueryVars
-} from '../../../components/PostsByTag'
+} from '../../../lib/gqlQueries'
+import PostsByTag from '../../../components/PostsByTag'
 
 
 function Tag({ tag }) {

@@ -1,9 +1,7 @@
 import Layout from '../components/Layout';
 import { initializeApollo } from '../lib/apolloClient'
-import Posts, {
-    ALL_POSTS_QUERY,
-    blogPostCollectionQueryVars,
-} from '../components/Posts'
+import { ALL_POSTS_QUERY, blogPostCollectionQueryVars } from '../lib/gqlQueries'
+import Posts from '../components/Posts'
 
 function Blog() {
     return (
