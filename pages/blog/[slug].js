@@ -11,7 +11,7 @@ function Slug({ post }) {
         return <ErrorMessage statusCode='404' message="Page not found." />
         
     var comments = (post.linkedFrom != null) ? 
-    (post.linkedFrom.entryCollection.items) : { length : 0 };
+    (post.linkedFrom.commentCollection.items) : { length : 0 };
     return (
         <Layout title="Blog" tagArray={post.tags} authorOnOff={true}>
             <Post post={post} />
